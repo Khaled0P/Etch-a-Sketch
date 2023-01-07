@@ -48,8 +48,6 @@ button:hover{
 
 .gridBox{
     border: 1px solid black;
-    width: calc(100%/16);
-    height: calc(100%/16);
 }
 
 /* .gridBox:hover{
