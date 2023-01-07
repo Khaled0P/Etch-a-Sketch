@@ -4,10 +4,46 @@
     box-sizing: border-box;
 }
 
+body {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    margin: 1em;
+    font-size: 48px;
+}
+
+button{
+    display: inline-block;
+    margin: 2em 1em;
+    padding: 1em 2em;
+    font-size: 16px;
+    border-radius: 9px;;
+}
+
+button.reset-btn{
+    background-color:brown;
+    color: white;
+}
+
+button.gridSize-btn{
+    background-color:cadetblue;
+    color:white;
+}
+
+
+button:hover{
+    filter: brightness(120%);
+}
+
 .container{
-    height: 100vh;
+    height: 400px;
+    width: 600px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto 2em;
 }
 
 .gridBox{
@@ -16,3 +52,6 @@
     height: calc(100%/16);
 }
 
+/* .gridBox:hover{
+    background-color: black;
+} */
