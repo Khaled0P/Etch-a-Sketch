@@ -1,6 +1,10 @@
 const container = document.querySelector('.container');
-let gridSize
+let gridSize;
 
+function randomRGB (){
+    let random = Math.floor(Math.random() * 255);
+    return random;
+};
 
 function createGrid(x =16){
     let boxWidth = 600/x;
@@ -13,7 +17,7 @@ function createGrid(x =16){
             gridBox.style.height = `${boxHeight}px`;
             container.appendChild(gridBox);
             gridBox.addEventListener('mouseover', ()=> {
-            gridBox.style.backgroundColor= 'black';
+            gridBox.style.backgroundColor= `rgb(${randomRGB()},${randomRGB()},${randomRGB()})`;
             })
         }
     }
@@ -29,8 +33,8 @@ function reset(){
 
 function gridSizef(){
     let gridSize = prompt('enter grid size');
-    while (Number(gridSize) > 100){
-        gridSize = prompt("number must be below 100, enter grid size");
+    while (Number(gridSize) > 100 || isNaN(Number(gridSize))){
+        gridSize = prompt("must be a number below 100, try again!");
     }
         let gridBox = document.querySelectorAll('.gridBox');
         gridBox.forEach((box) => {
